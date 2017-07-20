@@ -1,0 +1,40 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "repository": "<%= repository %>",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "tight": "webpack --config ./webpack.config.js --optimize-minimize",
+    "start": "node ./bin/api/api.bundle.js",
+    "visit": "browser-sync start --server ./bin/app --files ./bin/app --port 8081 --no-open --no-ui",
+    "units": "mocha ./test/**/*.test.js"
+  },
+  "keywords": [
+    "cool",
+    "project"
+  ],
+  "devDependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "body-parser": "^1.17.2",
+    "browser-sync": "^2.18.12",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "html-webpack-plugin": "^2.28.0",
+    "minimist": "^1.2.0",
+    "mocha": "^3.4.2",
+    "raw-loader": "^0.5.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
