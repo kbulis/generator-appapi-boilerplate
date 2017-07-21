@@ -7,7 +7,7 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     this.log(yosay(
-      'You are using the ' + chalk.red('generator-appapi-boilerplate') + ' generator...'
+      'You are using the ' + chalk.red('appapi-boilerplate') + ' generator...'
     ));
 
     const prompts = [
