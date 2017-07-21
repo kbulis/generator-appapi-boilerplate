@@ -43,11 +43,18 @@ var app = {
         collapseWhitespace: true,
         minifyCSS: true
       },
-      chunksSortMode: 'manual',
-      chunks: [
-        'shared',
-        'app'
-      ]
+      chunksSortMode: function(a, b) {
+        if (a.names[0] === 'shared') {
+          return -1;
+        }
+        else
+        if (b.names[0] === 'shared') {
+          return +1;
+        }
+        else {
+          return 0;
+        }
+      }
     })
   ]
 };
