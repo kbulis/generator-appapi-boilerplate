@@ -7,25 +7,25 @@ const yosay = require('yosay');
 module.exports = class extends Generator {
   prompting() {
     this.log(yosay(
-      'You are using the ' + chalk.red('appapi-boilerplate') + ' generator...'
+      'You are using the ' + chalk.red('appapi-boilerplate ' + require('../../package.json').version) + ' generator...'
     ));
 
     const prompts = [
-      {type: 'input',
+      { type: 'input',
         name: 'name',
         message: 'Your project name',
         default: this.appname
       },
-      {type: 'input',
+      { type: 'input',
         name: 'description',
         message: 'Your project description',
         default: 'Just another angular app express api webpack project...'
       },
-      {type: 'input',
+      { type: 'input',
         name: 'author',
         message: 'Author'
       },
-      {type: 'input',
+      { type: 'input',
         name: 'repository',
         message: 'Repository'
       }

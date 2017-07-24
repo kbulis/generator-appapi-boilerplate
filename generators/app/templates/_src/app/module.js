@@ -1,1 +1,1 @@
-module.exports = angular.module('app<%= name %>', [ 'ngRoute' ]);
+module.exports = angular.module('app<%= name %>', [ 'ngRoute', 'ngResource' ]);

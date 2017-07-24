@@ -21,6 +21,12 @@ process.on("exit", function() {
 app.use(parsing.urlencoded({ extended: true }));
 app.use(parsing.json());
 
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Headers', req.header('Access-Control-Request-Headers'));
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 require('./controllers').forEach(function (controller) {
   controller(app);
 });

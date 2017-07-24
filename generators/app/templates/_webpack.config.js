@@ -28,7 +28,8 @@ var app = {
   entry: {
     shared: [
       'angular',
-      'angular-route'
+      'angular-route',
+      'angular-resource'
     ],
     app: [
       './src/app/index.js'

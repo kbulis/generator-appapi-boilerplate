@@ -1,2 +1,2 @@
-require('./welcome')
-require('./managed')
+require('./welcomeController');
+require('./managedController');
