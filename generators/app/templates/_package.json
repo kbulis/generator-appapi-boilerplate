@@ -10,7 +10,7 @@
     "build": "webpack --config ./webpack.config.js",
     "tight": "webpack --config ./webpack.config.js --optimize-minimize",
     "start": "node ./bin/api/api.bundle.js",
-    "visit": "browser-sync start --server ./bin/app --files ./bin/app --port 8081 --no-open --no-ui",
+    "visit": "node ./bin/srv/srv.bundle.js",
     "units": "mocha ./test/**/*.test.js"
   },
   "keywords": [
@@ -24,7 +24,6 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
     "body-parser": "^1.17.2",
-    "browser-sync": "^2.18.12",
     "chai": "^4.0.2",
     "chai-http": "^3.0.0",
     "html-webpack-plugin": "^2.28.0",

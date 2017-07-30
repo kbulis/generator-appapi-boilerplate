@@ -22,6 +22,13 @@ var app = {
         use: {
           loader: 'raw-loader'
         }
+      },
+      {
+        test: /\.txt$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'raw-loader'
+        }
       }
     ]
   },
@@ -82,7 +89,7 @@ var api = {
         use: {
           loader: 'raw-loader'
         }
-      }      
+      }
     ]
   },
   entry: {
@@ -95,7 +102,42 @@ var api = {
   }
 };
 
+var srv = {
+  target: 'node',
+  output: {
+    path: path.resolve(__dirname, 'bin/srv'),
+    filename: '[name].bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.txt$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'raw-loader'
+        }
+      }
+    ]
+  },
+  entry: {
+    srv: [
+      './src/srv/serve.js'
+    ]
+  },
+  externals: {
+    'express': 'commonjs express'
+  }
+};
+
 module.exports = [
   app,
-  api
+  api,
+  srv
 ];
