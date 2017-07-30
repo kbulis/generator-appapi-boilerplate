@@ -1,6 +1,6 @@
 {
   "name": "generator-appapi-boilerplate",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Just another angular app express api webpack yeoman generator.",
   "homepage": "https://github.com/unowmo/generator-appapi-boilerplate",
   "repository": "unowmo/generator-appapi-boilerplate",
