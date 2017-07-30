@@ -23,11 +23,11 @@ app.use(express.static('bin/app/', {
 
 const configs = require('./configs');
 
-if (arg.env === 'production' || arg.env === 'prod') {
-  arg.env = 'production';
+if (arg.env === 'development' || arg.env === 'dev') {
+  arg.env = 'development';
 }
 else {
-  arg.env = 'development';
+  arg.env = 'production';
 }
 
 if (!configs.srv[arg.env]) {
