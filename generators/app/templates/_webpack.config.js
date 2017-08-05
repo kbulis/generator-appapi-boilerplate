@@ -45,7 +45,7 @@ var app = {
   plugins: [
     new htmlWebpackPlugin({
       template: './src/app/index.html',
-      favicon: './src/app/favicon.ico',
+      favicon: './src/app/favicon.png',
       minify: {
         caseSensitive: true,
         collapseWhitespace: true,
@@ -66,7 +66,6 @@ var app = {
     })
   ]
 };
-
 
 var api = {
   target: 'node',
