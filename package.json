@@ -2,8 +2,8 @@
   "name": "generator-appapi-boilerplate",
   "version": "0.9.6",
   "description": "Just another angular app express api webpack yeoman generator.",
-  "homepage": "https://github.com/unowmo/generator-appapi-boilerplate",
-  "repository": "unowmo/generator-appapi-boilerplate",
+  "homepage": "https://github.com/kbulis/generator-appapi-boilerplate",
+  "repository": "kbulis/generator-appapi-boilerplate",
   "license": "ISC",
   "author": {
     "name": "Kirk Bulis",
